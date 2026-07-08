@@ -17,6 +17,17 @@ NOT_FOUND_LABEL = 'POLOŽKA NENALEZENA'
 RESULT_SHEET_NAME = 'Vyfiltrovano'
 
 
+def normalize_code(value):
+    if value is None:
+        return ''
+    if isinstance(value, float) and value.is_integer():
+        value = int(value)
+    text = str(value).strip()
+    if text.isdigit() and len(text) == 5:
+        text = text.zfill(6)
+    return text
+
+
 def find_columns(header_row):
     mapping = {}
     for idx, cell in enumerate(header_row, start=1):
@@ -39,7 +50,7 @@ def read_codes(sheet):
         text = str(val).strip()
         if not text or text == SRC_HEADERS['kod']:
             continue
-        codes.append(text)
+        codes.append(normalize_code(val))
     return codes
 
 
