@@ -11,19 +11,19 @@ pip install openpyxl pyinstaller
 ## 2. Sestavení .exe
 V příkazové řádce přejdi do složky, kde je `ventus_filter.py`, a spusť:
 ```
-pyinstaller --onefile --noconsole --name VentusFilter ventus_filter.py
+pyinstaller --onefile --noconsole --name NakupniCenaFilter --icon=rappa_icon.ico ventus_filter.py
 ```
 
 - `--onefile` = vše zabalí do jednoho .exe souboru
 - `--noconsole` = nebude se otevírat černé okno konzole, jen dialogová okna
 
 ## 3. Výsledek
-Hotový soubor najdeš v: `dist\VentusFilter.exe`
+Hotový soubor najdeš v: `dist\NakupniCenaFilter.exe`
 
 Tento soubor už funguje samostatně na jakémkoliv Windows PC (i bez Pythonu) — stačí ho zkopírovat a spustit.
 
 ## Jak program funguje
-1. Spustíš `VentusFilter.exe`
+1. Spustíš `NakupniCenaFilter.exe`
 2. Otevře se dialog pro výběr souboru — vybereš svůj Excel export z Ventusu
 3. Program očekává v souboru:
    - **1. list** – data z Ventusu (sloupce: Kód sortimentu, Cena, Název, Nákupní smluvený ceník - platnosti.Název)
