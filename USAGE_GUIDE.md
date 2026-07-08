@@ -5,6 +5,12 @@ Z velkého exportu z Ventusu vybere pouze položky, jejichž kódy si zadáš, a
 
 ## Postup
 
+### 0. Stažení programu
+
+Program najdeš na společném disku na adrese:
+S:\_Osobni_slozky\Max\NakupniCenaFilter
+Stáhni si nejnovější verzi programu do svého počítače. Tento krok stačí provést pouze jednou.
+
 ### 1. Připrav si Excel soubor
 1. Exportuj data z Ventusu do .xlsx souboru.
 2. Ujisti se, že tento export je **1. list** v sešitu (obsahuje sloupce Kód sortimentu, Cena, Název, Nákupní smluvený ceník - platnosti.Název).
